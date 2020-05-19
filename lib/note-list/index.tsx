@@ -245,7 +245,6 @@ export class NoteList extends Component<Props> {
     ) {
       const hasNotes = notes.length > 0;
       this.setState({ selectedIndex: hasNotes ? 0 : null });
-      this.props.onSelectNote(hasNotes ? notes[0] : null);
       return;
     }
 

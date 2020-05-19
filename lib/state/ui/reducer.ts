@@ -223,6 +223,11 @@ const note: A.Reducer<T.NoteEntity | null> = (state = null, action) => {
       return null;
     case 'OPEN_NOTE':
     case 'SELECT_NOTE':
+      console.log('------------------');
+      console.log(action.type);
+      console.log(action.options);
+      console.log(action.note);
+      console.log('------------------');
       return action.options
         ? {
             ...action.note,
@@ -230,6 +235,11 @@ const note: A.Reducer<T.NoteEntity | null> = (state = null, action) => {
           }
         : action.note;
     case 'SET_SYSTEM_TAG':
+      console.log('------------------');
+      console.log(action.type);
+      console.log(action.options);
+      console.log(action.note);
+      console.log('------------------');
       return toggleSystemTag(action.note, action.tagName, action.shouldHaveTag);
     default:
       return state;
