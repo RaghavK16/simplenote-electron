@@ -2,6 +2,12 @@
   z-index: 1000;
 }
 
+.login.is-electron input:invalid {
+  /* needed because Electron doesn't style these */
+  /*box-shadow: 0 0 1.5px 1px red;*/
+  outline-color: red;
+}
+
 .login {
   display: flex;
   flex: 1 1 auto;
@@ -65,7 +71,9 @@
     text-decoration: none;
   }
 
-  .login__forgot, .login__signup, .terms {
+  .login__forgot,
+  .login__signup,
+  .terms {
     color: $studio-gray-60;
     display: block;
     font-size: 14px;
@@ -74,7 +82,8 @@
     text-align: center;
   }
 
-  .login__signup a, .terms a {
+  .login__signup a,
+  .terms a {
     color: $studio-blue-60;
     margin-left: 5px;
     text-decoration: none;
@@ -130,11 +139,14 @@
     color: $studio-gray-20;
   }
 
-  .login__forgot, .login__signup, .terms {
+  .login__forgot,
+  .login__signup,
+  .terms {
     color: $studio-gray-20;
   }
 
-  .login__signup a, .terms a {
+  .login__signup a,
+  .terms a {
     color: $studio-blue-20;
   }
 
